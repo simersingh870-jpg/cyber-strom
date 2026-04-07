@@ -1,45 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
-    <meta name="viewport" content="width=devive-width, initially scale=1.0">
-       <title>Link Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberLink Analyzer - URL Security & SEO Analysis</title>
   <link rel="stylesheet" href="style.css" />
-      <link rel="stylesheet" href="style.css" />
   <!-- Google Fonts: Syne for headings, DM Mono for data -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <!-- Lucide icons via CDN -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
-  <body>
-     <!-- ===================== BACKGROUND EFFECTS ===================== -->
+<body>
+
+  <!-- ===================== BACKGROUND EFFECTS ===================== -->
   <div class="bg-grid"></div>
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
-     <!-- ===================== HEADER ===================== -->
+
+  <!-- ===================== HEADER ===================== -->
   <header class="header">
     <div class="logo">
       <span class="logo-icon"><i data-lucide="scan-search"></i></span>
-      <span class="logo-text">LinkAnalyzer</span>
+      <span class="logo-text">CyberLink</span>
     </div>
     <span class="badge">v1.0</span>
   </header>
-    <!-- ==================== HERO SECTION ==================== -->
+
+  <!-- ==================== HERO SECTION ==================== -->
   <main>
     <section class="hero" id="home-section">
 
-      <div class="hero-tag">🔍 Deep URL Analysis</div>
+      <div class="hero-tag">🔍 Advanced URL Analysis</div>
 
       <h1 class="hero-title">
-        Inspect Any<br />
+        Analyze Any<br />
         <span class="gradient-text">Website Instantly</span>
       </h1>
 
       <p class="hero-subtitle">
-        Enter a URL below to extract SEO data, metadata, load time,<br />
-        IP address, and much more — all in seconds.
+        Extract metadata, load time, IP address, security analysis,<br />
+        threat detection, and risk assessment — all in real-time.
       </p>
-       <!-- URL INPUT FORM -->
+
+      <!-- URL INPUT FORM -->
       <div class="input-wrapper">
         <div class="input-icon"><i data-lucide="link"></i></div>
         <input
@@ -50,25 +54,35 @@
           autocomplete="off"
           spellcheck="false"
         />
-       <!-- Analyze button triggers the JS function -->
+        <!-- Analyze button triggers the JS function -->
         <button class="analyze-btn" id="analyzeBtn" onclick="analyzeURL()">
           <span class="btn-text">Analyze</span>
           <span class="btn-icon"><i data-lucide="arrow-right"></i></span>
         </button>
-      </div>  
-       <!-- Error message shown for invalid URL -->
-      <div class="error-msg" id="errorMsg">
-        <i data-lucide="alert-circle"></i>
-        <span id="errorText">Please enter a valid URL</span>
       </div>
-       <!-- Quick example links -->
+
+      <!-- Error message shown for invalid URL -->
+      <div class="error-msg" id="errorMsg">
+        <div class="error-main">
+          <i data-lucide="alert-circle"></i>
+          <span id="errorText">Please enter a valid URL</span>
+        </div>
+        <div class="error-solution" id="errorSolution" hidden>
+          <strong>Help:</strong> Follow the guidance shown here to fix the issue.
+        </div>
+      </div>
+
+      <!-- Quick example links -->
       <div class="examples">
         <span class="examples-label">Try:</span>
         <button class="example-chip" onclick="fillExample('https://github.com')">github.com</button>
         <button class="example-chip" onclick="fillExample('https://wikipedia.org')">wikipedia.org</button>
         <button class="example-chip" onclick="fillExample('https://openai.com')">openai.com</button>
       </div>
-      <!-- ==================== LOADING OVERLAY ==================== -->
+
+    </section>
+
+    <!-- ==================== LOADING OVERLAY ==================== -->
     <div class="loading-overlay" id="loadingOverlay">
       <div class="loader-card">
         <div class="spinner-ring"></div>
@@ -76,28 +90,39 @@
         <p class="loading-sub">Fetching metadata & running checks</p>
       </div>
     </div>
+
     <!-- ==================== RESULTS SECTION ==================== -->
     <section class="results-section" id="resultsSection">
-     <!-- Back button to return to home -->
+
+      <!-- Back button to return to home -->
       <button class="back-btn" onclick="goBack()">
         <i data-lucide="arrow-left"></i> Analyze Another
       </button>
-     <!-- Analyzed URL display -->
+
+      <!-- Analyzed URL display -->
       <div class="analyzed-url" id="analyzedUrl"></div>
+
       <!-- Results Grid: cards are injected here by script.js -->
       <div class="results-grid" id="resultsGrid"></div>
-    </section>
+
+      <!-- SEO Score Bar -->
+      <div class="seo-section" id="seoSection"></div>
+
     </section>
   </main>
-    <!-- ===================== FOOTER ===================== -->
+
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <p>welcom to the LinkAnalyzer © 2025</p>
+    <p>welcom to the LinkAnalyzer © 2026</p>
   </footer>
-<!-- Load our JavaScript -->
+
+  <!-- Load our JavaScript -->
   <script src="script.js"></script>
+
   <!-- Initialize Lucide icons after DOM is ready -->
   <script>
     lucide.createIcons();
   </script>
-  </body>
+
+</body>
 </html>
